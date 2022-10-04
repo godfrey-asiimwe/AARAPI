@@ -1,0 +1,11 @@
+
+#chaning user password
+mysql> use mysql;
+mysql> update user set authentication_string=PASSWORD("root") where User='coseke';
+mysql> flush privileges;
+mysql> quit
+
+#attaching database to a user
+GRANT ALL PRIVILEGES ON DB.* TO 'username'@'coseke';
+
+SHOW GRANTS FOR 'coseke'@'localhost';
